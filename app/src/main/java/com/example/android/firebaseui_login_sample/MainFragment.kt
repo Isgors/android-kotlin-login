@@ -138,8 +138,9 @@ class MainFragment : Fragment() {
             AuthUI.getInstance()
                 .createSignInIntentBuilder()
                 .setAvailableProviders(providers)
+                .setIsSmartLockEnabled(false)
                 .build(),
-            MainFragment.SIGN_IN_RESULT_CODE
+            SIGN_IN_RESULT_CODE
         )
     }
 }
